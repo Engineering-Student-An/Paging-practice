@@ -8,9 +8,4 @@ public class SearchForm {
     private String name;
     private Integer startSal;
     private Integer endSal;
-
-    public SearchForm() {
-        this.startSal=0;
-        this.endSal=99999;
-    }
 }

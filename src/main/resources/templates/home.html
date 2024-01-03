@@ -11,8 +11,8 @@
     <form th:object="${searchForm}" th:method="get" action="">
         <div>
             <input type="text" th:field="*{name}" th:value="*{name}" placeholder="이름" style="margin-right: 20px">
-            <input type="number" th:field="*{startSal}" th:value="*{startSal}" placeholder="연봉 시작값" style="margin-right: 20px">
-            <input type="number" th:field="*{endSal}" th:value="*{endSal}" placeholder="연봉 끝값" style="margin-right: 20px">
+            <input type="number" th:field="*{startSal}" th:value="*{startSal}" placeholder="연봉 시작값 (단위 : 억)" style="margin-right: 20px">
+            <input type="number" th:field="*{endSal}" th:value="*{endSal}" placeholder="연봉 끝값 (단위 : 억)" style="margin-right: 20px">
             <button type="submit">검색</button>
         </div>
     </form>
@@ -27,10 +27,9 @@
     <tr>
         <th>선수 이름</th>
         <th>소속 팀</th>
-        <th>선수 연봉</th>
+        <th>선수 연봉 (단위 : 억)</th>
     </tr>
     </thead>
-
     <tbody>
     <tr th:each="player : ${players}">
         <td th:text="${player.name}"></td>
