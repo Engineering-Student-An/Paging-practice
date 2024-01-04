@@ -23,7 +23,7 @@ public class PlayerController {
     public String home(@RequestParam(required = false, defaultValue = "1") int page,
                         @ModelAttribute SearchForm searchForm,
                         Model model){
-
+//
 
         if(searchForm.getStartSal() == null) searchForm.setStartSal(0);
         if(searchForm.getEndSal() == null) searchForm.setEndSal(99999);
